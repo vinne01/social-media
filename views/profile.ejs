@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApnaSocialMedia</title>
+    <link rel="icon" href="https://ik.imagekit.io/vinaymry/apnasocialmedia.png?updatedAt=1737201800425" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- <h1 class="text-4xl font-extrabold text-pink-500 text-center mb-6 transform transition-all duration-500 hover:text-yellow-300 hover:scale-105 shadow-lg p-4 rounded-lg bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 bg-clip-text text-transparent">
+        ApnaSocialMedia
+    </h1> -->
+    <h1 class="text-4xl font-extrabold text-pink-500 text-center mb-6 transform transition-all duration-500 hover:text-yellow-300 hover:scale-105 shadow-lg p-4 rounded-lg bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 bg-clip-text text-transparent">
+        ApnaSocialMedia
+    </h1>
+
+    <!-- Center the profile container on the page -->
+    <div class="flex justify-center items-center min-h-screen">
+
+        <!-- Profile Card Container -->
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+
+            <!-- Display user name and username -->
+            <div class="text-center mb-6">
+                <h1 class="text-3xl font-semibold text-gray-700">
+                     Hello, <%= user.name %>!  <span role="img" aria-label="star">🌟</span>
+                </h1>
+                <h2 class="text-xl text-yellow-600 mt-2">
+                         Welcome to ApnaSocialMedia<br>
+                         <span role="img" aria-label="heart">❤️</span> @<%= user.username %>   <span role="img" aria-label="heart">❤️</span>
+            </div>
+
+            <!-- Buttons Section: Home on the left, Logout on the right -->
+            <div class="flex justify-between items-center mb-4">
+                <a href="/dashboard" class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600">
+                    Home
+                </a>
+                <% if (isOwnProfile) { %>
+                    <a href="/logout" class="bg-red-500 text-white rounded-md px-4 py-2 hover:bg-red-600">
+                        Logout
+                    </a>
+                <% } %>
+            </div>
+
+            <!-- Create New Post Section -->
+            <% if (isOwnProfile) { %>
+            <div class="bg-white p-8 rounded-lg shadow-lg mt-6">
+                <h3 class="text-2xl font-semibold text-pink-700 mb-4">Create a New Post</h3>
+
+                <!-- Post creation form -->
+                <form action="/post" method="POST" enctype="multipart/form-data">
+                    <div class="mb-4">
+                        <textarea name="content" placeholder="Write your post here..." rows="4" class="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label for="image" class="block text-pink-700">Upload an image:</label>
+                        <input type="file" name="image" accept="image/*" class="w-full p-2 border border-gray-300 rounded-md mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+
+                    <button type="submit" class="w-full py-3 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        Create Post <span role="img" aria-label="create">✍️</span>
+                    </button>
+                </form>
+            </div>
+            <% } %>
+
+            <!-- Display User's Posts -->
+            <div class="bg-white p-8 rounded-lg shadow-lg mt-6">
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">
+                    <% if (isOwnProfile) { %>
+                        Your Posts
+                    <% } else { %>
+                        <%= user.name %>'s Posts
+                    <% } %>
+                </h3>
+                
+                <!-- Loop through each post -->
+                <% if (user.posts && user.posts.length > 0) { %>
+                <% user.posts.reverse().forEach(function(post) { %>
+                    <div class="mb-6 p-4 bg-gray-50 rounded-lg shadow-md">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <!-- Username for the post -->
+                                <span class="text-gray-700 font-semibold">@<%= user.username %> </span>
+                            </div>
+                        </div>
+
+                        <!-- Post content -->
+                        <p class="text-gray-700 mt-2"><%= post.content %></p>
+
+                         <!-- Display the image if it exists -->
+                        <% if (post.image) { %>
+                            <div class="mt-4">
+                                <img src="<%= post.image %>" alt="Post Image" class="w-full rounded-md shadow-md" />
+                            </div>
+                        <% } %>
+
+                        <div class="flex justify-between items-center mt-4">
+                            <% if (isOwnProfile) { %>
+                            <div class="flex items-center">
+                                <!-- Edit post button -->
+                                <a href="/edit/<%= post._id %>" class="text-gray-600 hover:text-blue-500 mr-4">
+                                    <span role="img" aria-label="edit">✏️</span> Edit
+                                </a>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+                <% }) %>
+                <% } else { %>
+                  <!-- Display message if no posts exist -->
+                  <p class="text-pink-500">No posts yet. Start sharing your thoughts!</p>
+              <% } %>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://ik.imagekit.io/vinaymry/apnasocialmedia.png?updatedAt=1737201800425" type="image/png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>ApnaSocialMedia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <h1 class="text-4xl font-extrabold text-pink-500 text-center mb-6 transform transition-all duration-500 hover:text-yellow-300 hover:scale-105 shadow-lg p-4 rounded-lg bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 bg-clip-text text-transparent">
+        ApnaSocialMedia
+    </h1>
+
+    <!-- Center the profile container on the page -->
+    <div class="flex justify-center items-center min-h-screen">
+
+        <!-- Profile Card Container -->
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+
+            <!-- Display user name and username -->
+
+            <!-- Create New Post Section -->
+            <div class="bg-white p-8 rounded-lg shadow-lg mt-6">
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Edit Your Posts</h3>
+
+                <!-- Post creation form -->
+                <form action="/update/<%= post._id %>" method="POST">
+                    <div class="mb-4">
+                        <textarea name="content" placeholder="Write your post here..." rows="4" class="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"><%= post.content %></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 bg-pink-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        Update your posts <span role="img" aria-label="create">✍️</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Display User's Posts -->
+
+        </div>
+
+    </div>
+
+    <footer class="bg-pink-500 text-white py-4 mt-6">
+        <div class="container mx-auto px-4">
+            <!-- Social Media Section -->
+            <section class="mb-4 flex justify-center space-x-6">
+                <!-- Facebook -->
+                <a class="btn text-white btn-floating" style="background-color: #3b5998;" href="https://leetcode.com/u/vinne01/" role="button">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <!-- Twitter -->
+                <a class="btn text-white btn-floating" style="background-color: #55acee;" href="https://x.com/Vinne0563" role="button">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <!-- Contact -->
+                <a class="btn text-white btn-floating" style="background-color: #dd4b39;" href="{% url 'index' %}" role="button">
+                    <i class="fas fa-address-book"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a class="btn text-white btn-floating" style="background-color: #ac2bac;" href="https://www.instagram.com/vinnay.maurya/?hl=en" role="button">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <!-- LinkedIn -->
+                <a class="btn text-white btn-floating" style="background-color: #0082ca;" href="https://www.linkedin.com/in/vinaymry/" role="button">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <!-- Github -->
+                <a class="btn text-white btn-floating" style="background-color: #333333;" href="https://github.com/vinne01" role="button">
+                    <i class="fab fa-github"></i>
+                </a>
+            </section>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="text-center p-3 bg-pink-600">
+            © 2025 Copyright: ApnaDocumentSeller | All Rights Reserved
+            <a class="text-white" href="https://myfirstsportfolio.netlify.app/">See My Portfolio</a>
+        </div>
+    </footer>
+
+</body>
+</html>

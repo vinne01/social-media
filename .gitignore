@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Build output
+dist/
+build/
+
+# Log files
+*.log
+npm-debug.log*
+
+# Coverage directory
+coverage/
+
+# IDE configuration files
+.vscode/
+.idea/
+
+# MacOS & Windows system files
+.DS_Store
+Thumbs.db
+
+# Lock files (optional, but usually recommended)
+package-lock.json
+yarn.lock
