@@ -4,7 +4,8 @@ This is a simple social media platform built using **Node.js**, **Express.js**, 
 
 ## Features
 
--![ **User Registration and Login:**](https://ik.imagekit.io/vinaymry/Screenshot%202025-01-20%20161030.png?updatedAt=1737370337336)[](https://ik.imagekit.io/vinaymry/Screenshot%202025-01-20%20160626.png?updatedAt=1737370339069)
+-![ **User Registration:**](https://ik.imagekit.io/vinaymry/Screenshot%202025-01-20%20161030.png?updatedAt=1737370337336)
+-![**User Login :**](https://ik.imagekit.io/vinaymry/Screenshot%202025-01-20%20160626.png?updatedAt=1737370339069)
   - New users can sign up by providing a unique **username**, **email address**, and **password**.
   - Registered users can log in using their **email** and **password**.
 
