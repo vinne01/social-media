@@ -2,6 +2,7 @@
 
 This is a simple social media platform built using **Node.js**, **Express.js**, and **EJS**. It allows users to register, log in, create posts with images, and interact with other users through likes. The application provides a basic but functional social networking experience, where users can share content and engage with each other.
 
+-![ **APNASOCIALMEDIA:**](https://ik.imagekit.io/vinaymry/Screenshot%202025-01-20%20163619.png?updatedAt=1737371246192)
 ## Features
 
 -![ **User Registration:**](https://ik.imagekit.io/vinaymry/Screenshot%202025-01-20%20161030.png?updatedAt=1737370337336)
