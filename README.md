@@ -9,19 +9,19 @@ This is a simple social media platform built using **Node.js**, **Express.js**, 
   - New users can sign up by providing a unique **username**, **email address**, and **password**.
   - Registered users can log in using their **email** and **password**.
 
-  -![**Post Creation:**]()
+  -![**Post Creation:**](https://ik.imagekit.io/vinaymry/Screenshot%202025-01-20%20161123.png?updatedAt=1737370339075)
   - Users can create posts with text and upload images from their devices.
   - Posts are stored in the database and linked to the user's profile.
 
--![ **Interacting with Posts:**]()
+-![ **Interacting with Posts:**](https://ik.imagekit.io/vinaymry/Screenshot%202025-01-20%20160952.png?updatedAt=1737370338546)
   - Users can like posts made by others. This allows users to engage with the content they find interesting.
   - Users can view posts created by others and their own posts on their profile page.
 
--![  **User Profile:**]()
+-![  **User Profile:**](https://ik.imagekit.io/vinaymry/Screenshot%202025-01-20%20160927.png?updatedAt=1737370337986)
   - Each user has a profile page displaying their posts and the total number of likes on each post.
   - Clicking on a username will redirect to that user's profile to view their posts.
 
--![ **Dynamic User Interface:**]()
+-![ **Dynamic User Interface:**](https://ik.imagekit.io/vinaymry/Screenshot%202025-01-20%20161123.png?updatedAt=1737370339075)
   - The application uses **EJS** templates to render dynamic content such as posts, images, and usernames.
 
 ## Technologies Used
