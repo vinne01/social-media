@@ -1,4 +1,4 @@
-# Social Media Application
+# Social Media Applications
 
 This is a simple social media platform built using **Node.js**, **Express.js**, and **EJS**. It allows users to register, log in, create posts with images, and interact with other users through likes. The application provides a basic but functional social networking experience, where users can share content and engage with each other.
 
